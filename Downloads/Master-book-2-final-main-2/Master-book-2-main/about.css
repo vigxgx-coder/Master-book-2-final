@@ -1,0 +1,92 @@
+* {
+    margin: 0;       
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: #111;
+}
+ 
+/* HERO SECTION */
+.hero {
+    height: 100vh;
+    background: url("https://images.unsplash.com/photo-1524995997946-a1c2e315a42f") no-repeat center/cover;
+    position: relative;
+}
+
+.overlay {
+    background: rgba(255,255,255,0.9);
+    height: 100%;
+}
+
+/* LAYOUT */
+.container {
+    max-width: 1200px;
+    margin: auto;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    padding: 40px;
+}
+
+/* LEFT */
+.left {
+    flex: 1;
+}
+
+.left h1 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.left p {
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+.stats h2 {
+    font-size: 28px;
+    color: #333;
+}
+
+.stats span {
+    color: #777;
+}
+
+/* RIGHT */
+.right {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.card {
+    background: #f2d3b0;
+    padding: 40px;
+    width: 300px;
+    height: 350px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+.card h2 {
+    font-family: cursive;
+    margin-bottom: 20px;
+}
+
+.quote {
+    font-size: 14px;
+    text-align: center;
+    color: #444;
+}

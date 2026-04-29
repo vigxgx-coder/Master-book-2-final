@@ -1,0 +1,150 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif; 
+}
+
+body {
+    background-color: #F9F7F2; 
+    color: #333;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+
+.navbar {
+    background-color: white;
+    border-bottom: 1px solid #ddd;
+    padding: 15px 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.nav-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.logo span {
+    color: #EA580C; 
+}
+
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+
+.search-box {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.search-box .icon {
+    position: absolute;
+    left: 10px;
+    color: #888;
+    font-size: 20px;
+}
+
+.search-box input {
+    padding: 8px 15px 8px 35px; 
+    border-radius: 20px;
+    border: 1px solid #ddd;
+    background-color: #f4f4f4;
+    outline: none;
+    width: 200px;
+    transition: 0.3s;
+}
+
+.search-box input:focus {
+    background-color: white;
+    border-color: #EA580C; 
+}
+
+.menu a {
+    text-decoration: none;
+    color: #666;
+    margin-left: 20px;
+    font-weight: 500;
+}
+
+.menu a:hover {
+    color: #EA580C;
+}
+
+
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 80px 20px;
+    flex-wrap: wrap; 
+}
+
+.hero-text {
+    flex: 1;
+    min-width: 300px;
+}
+
+.hero-text h1 {
+    font-size: 50px;
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+.hero-text h1 span {
+    color: #EA580C;
+}
+
+.hero-text p {
+    font-size: 18px;
+    color: #666;
+    margin-bottom: 30px;
+    max-width: 450px;
+}
+
+.btn-explore {
+    background-color: #1e293b;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-explore:hover {
+    background-color: #EA580C;
+    transform: translateY(-3px); 
+}
+
+
+.hero-image {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    min-width: 300px;
+}
+
+.hero-image img {
+    width: 320px;
+    border-radius: 15px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+}

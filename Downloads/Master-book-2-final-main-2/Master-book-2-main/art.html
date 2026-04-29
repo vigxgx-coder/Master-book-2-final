@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+        <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-dymGp/..." crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=search"
+    />
+    <style>
+         
+        .nav-link {
+            display: flex;
+            align-items: center;
+            padding: 10px 12px;
+            margin-left: -12px;
+            border-radius: 8px;
+            color: #4B5563;
+            text-decoration: none;
+            font-size: 15px;
+
+            transition: all 0.25s ease;
+
+            transform: translateX(0px);
+        }
+
+        .nav-link:hover {
+            color: #111827;
+            background-color: #F3F4F6;
+
+            
+            transform: translateX(6px);
+
+            box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+        }
+
+        .nav-link i {
+            width: 20px;
+            margin-right: 12px;
+            transition: transform 0.25s ease;
+        }
+
+        .nav-link:hover i {
+            transform: scale(1.2);
+        }
+
+        .nav-link.active {
+            color: #1D4ED8;
+            font-weight: 700;
+            background-color: #EFF6FF;
+            transform: translateX(0px);
+        }
+
+        .discover-link {
+            transition: all 0.2s ease;
+            display: inline-block;
+        }
+        .discover-link:hover {
+            color: #111827;
+            transform: translateX(4px);
+        }
+    </style>
+</head>
+<body class=" bg-white" >
+    <div class="max-w-7xl mx-auto mt-20 px-6 flex gap-12">
+        
+        <!-- ===== SIDEBAR ===== -->
+        <aside class="w-64 flex-shrink-0">
+            <div class="mb-12">
+                <h2 class="text-2xl font-bold text-gray-800">Collections</h2>
+                <p class="text-sm text-gray-500">Curated for the curious</p>
+            </div>
+
+            <nav class="space-y-1">
+                <!-- active = ຫນ້າທີ່ກຳລັງເບິ່ງ -->
+                <a href="English.html" class="nav-link ">
+                    <i class="fas fa-book-open"></i> English Book
+                </a>
+                <a href="fiance.html" class="nav-link">
+                    <i class="fas fa-chart-line"></i> Finance
+                </a>
+                <a href="kid.html" class="nav-link">
+                    <i class="fas fa-book"></i> Books for Kids
+                </a>
+                <a href="Hot.html" class="nav-link">
+                    <i class="fas fa-fire"></i> Hot
+                </a>
+                <a href="art.html" class="nav-link active">
+                    <i class="fas fa-lightbulb"></i> Arts & Design
+                </a>
+            </nav>
+
+            <div class="mt-16">
+                <h3 class="text-xs font-bold text-gray-400 uppercase tracking-widest mb-4">Discover More</h3>
+                <ul class="space-y-3 text-gray-600">
+                    <li><a href="Main.html" class="discover-link hover:text-black">Home</a></li>
+                    <li><a href="rare-finds.html" class="discover-link hover:text-black">Rare Finds</a></li>
+                    <li><a href="signed-copies.html" class="discover-link hover:text-black">Signed Copies</a></li>
+                </ul>
+            </div>
+        </aside>
+        <!-- ===== END SIDEBAR ===== -->
+    
+        <main class="flex-grow">
+            <div class="grid grid-cols-4 gap-10">
+                
+                <div class="bg-white rounded-lg shadow-sm overflow-hidden flex flex-col border border-gray-200">
+                    <img src="https://m.media-amazon.com/images/I/51IRfBNS3BL._AC_UF894,1000_QL80_.jpg" alt="Book Cover" class="w-full aspect-[2/3] object-cover">
+                    <div class="p-3 flex-grow flex flex-col">
+                        <h3 class="text-md font-bold text-gray-800 h-10 mb-4">An Introduction to Art Education</h3>
+                        <div class="flex items-center gap-2 mb-4">
+                            <span class="text-gray-400 line-through text-md text-yellow-500">฿179.00</span>
+                            <span class="text-gray-800 text-md">฿161.00</span>
+                        </div>
+                        <div class="flex gap-1 mb-3">
+                            <button class="flex-1 border border-blue-400 text-blue-500 text-sm py-1.5 rounded-full hover:bg-blue-50">
+                                <i class="fas fa-book-open mr-1"></i> ทดลองอ่าน
+                            </button>
+                            <button onclick="openOrderModal('The Famous Five', 161)" class="bg-blue-100 text-blue-600 px-3 py-1.5 rounded-full hover:bg-blue-200">
+                                <i class="fas fa-shopping-cart"></i>
+                            </button>
+                        </div>
+                        <div class="bg-gradient-to-r from-[#FDE68A] via-[#FCD34D] to-[#F8AF64] text-black text-sm py-1.5 px-2 rounded-md flex items-center justify-center">
+                            <i class="far fa-clock mr-1"></i> สิ้นสุดใน 4 วัน
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-lg shadow-sm overflow-hidden flex flex-col border border-gray-200">
+                    <img src="https://m.media-amazon.com/images/I/519rFTX5vxL._AC_UF1000,1000_QL80_.jpg" alt="Book Cover" class="w-full aspect-[2/3] object-cover">
+                    <div class="p-3 flex-grow flex flex-col">
+                        <h3 class="text-md font-bold text-gray-800 h-10 mb-4">Art and Design Fundamentals</h3>
+                        <div class="flex items-center gap-2 mb-4">
+                            <span class="text-gray-400 line-through text-md text-yellow-500">฿179.00</span>
+                            <span class="text-gray-800 text-md">฿161.00</span>
+                        </div>
+                        <div class="flex gap-1 mb-3">
+                            <button class="flex-1 border border-blue-400 text-blue-500 text-sm py-1.5 rounded-full hover:bg-blue-50">
+                                <i class="fas fa-book-open mr-1"></i> ทดลองอ่าน
+                            </button>
+                            <button onclick="openOrderModal('The Famous Five', 161)" class="bg-blue-100 text-blue-600 px-3 py-1.5 rounded-full hover:bg-blue-200">
+                                <i class="fas fa-shopping-cart"></i>
+                            </button>
+                        </div>
+                        <div class="bg-gradient-to-r from-[#FDE68A] via-[#FCD34D] to-[#F8AF64] text-black text-sm py-1.5 px-2 rounded-md flex items-center justify-center">
+                            <i class="far fa-clock mr-1"></i> สิ้นสุดใน 4 วัน
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-lg shadow-sm overflow-hidden flex flex-col border border-gray-200">
+                    <img src="https://novapublishers.com/wp-content/uploads/2018/11/9781536109191-e1543323871921.jpg" alt="Book Cover" class="w-full aspect-[2/3] object-cover">
+                    <div class="p-3 flex-grow flex flex-col">
+                        <h3 class="text-md font-bold text-gray-800 h-10 mb-4">Art and Design Education</h3>
+                        <div class="flex items-center gap-2 mb-4">
+                            <span class="text-gray-400 line-through text-md text-yellow-500">฿179.00</span>
+                            <span class="text-gray-800 text-md">฿161.00</span>
+                        </div>
+                        <div class="flex gap-1 mb-3">
+                            <button class="flex-1 border border-blue-400 text-blue-500 text-sm py-1.5 rounded-full hover:bg-blue-50">
+                                <i class="fas fa-book-open mr-1"></i> ทดลองอ่าน
+                            </button>
+                            <button onclick="openOrderModal('The Famous Five', 161)" class="bg-blue-100 text-blue-600 px-3 py-1.5 rounded-full hover:bg-blue-200">
+                                <i class="fas fa-shopping-cart"></i>
+                            </button>
+                        </div>
+                        <div class="bg-gradient-to-r from-[#FDE68A] via-[#FCD34D] to-[#F8AF64] text-black text-sm py-1.5 px-2 rounded-md flex items-center justify-center">
+                            <i class="far fa-clock mr-1"></i> สิ้นสุดใน 4 วัน
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-lg shadow-sm overflow-hidden flex flex-col border border-gray-200">
+                    <img src="https://m.media-amazon.com/images/I/61l16K0czzL._AC_UF1000,1000_QL80_.jpg" alt="Book Cover" class="w-full aspect-[2/3] object-cover">
+                    <div class="p-3 flex-grow flex flex-col">
+                        <h3 class="text-md font-bold text-gray-800 h-10 mb-4">The Art of Design Strategy</h3>
+                        <div class="flex items-center gap-2 mb-4">
+                            <span class="text-gray-400 line-through text-md text-yellow-500">฿179.00</span>
+                            <span class="text-gray-800 text-md">฿161.00</span>
+                        </div>
+                        <div class="flex gap-1 mb-3">
+                            <button class="flex-1 border border-blue-400 text-blue-500 text-sm py-1.5 rounded-full hover:bg-blue-50">
+                                <i class="fas fa-book-open mr-1"></i> ทดลองอ่าน
+                            </button>
+                            <button onclick="openOrderModal('The Famous Five', 161)" class="bg-blue-100 text-blue-600 px-3 py-1.5 rounded-full hover:bg-blue-200">
+                                <i class="fas fa-shopping-cart"></i>
+                            </button>
+                        </div>
+                        <div class="bg-gradient-to-r from-[#FDE68A] via-[#FCD34D] to-[#F8AF64] text-black text-sm py-1.5 px-2 rounded-md flex items-center justify-center">
+                            <i class="far fa-clock mr-1"></i> สิ้นสุดใน 4 วัน
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-lg shadow-sm overflow-hidden flex flex-col border border-gray-200">
+                    <img src="https://m.media-amazon.com/images/I/71onc2cCDCL._AC_UF350,350_QL50_.jpg" alt="Book Cover" class="w-full aspect-[2/3] object-cover">
+                    <div class="p-3 flex-grow flex flex-col">
+                        <h3 class="text-md font-bold text-gray-800 h-10 mb-4">Building Design Strategy</h3>
+                        <div class="flex items-center gap-2 mb-4">
+                            <span class="text-gray-400 line-through text-md text-yellow-500">฿179.00</span>
+                            <span class="text-gray-800 text-md">฿161.00</span>
+                        </div>
+                        <div class="flex gap-1 mb-3">
+                            <button class="flex-1 border border-blue-400 text-blue-500 text-sm py-1.5 rounded-full hover:bg-blue-50">
+                                <i class="fas fa-book-open mr-1"></i> ทดลองอ่าน
+                            </button>
+                            <button onclick="openOrderModal('The Famous Five', 161)" class="bg-blue-100 text-blue-600 px-3 py-1.5 rounded-full hover:bg-blue-200">
+                                <i class="fas fa-shopping-cart"></i>
+                            </button>
+                        </div>
+                        <div class="bg-gradient-to-r from-[#FDE68A] via-[#FCD34D] to-[#F8AF64] text-black text-sm py-1.5 px-2 rounded-md flex items-center justify-center">
+                            <i class="far fa-clock mr-1"></i> สิ้นสุดใน 4 วัน
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow-sm overflow-hidden flex flex-col border border-gray-200">
+                    <img src="https://m.media-amazon.com/images/I/613A-pMZLUL._AC_UF350,350_QL50_.jpg" alt="Book Cover" class="w-full aspect-[2/3] object-cover">
+                    <div class="p-3 flex-grow flex flex-col">
+                        <h3 class="text-md font-bold text-gray-800 h-10 mb-4">Creating Courses for Adults</h3>
+                        <div class="flex items-center gap-2 mb-4">
+                            <span class="text-gray-400 line-through text-md text-yellow-500">฿179.00</span>
+                            <span class="text-gray-800 text-md">฿161.00</span>
+                        </div>
+                        <div class="flex gap-1 mb-3">
+                            <button class="flex-1 border border-blue-400 text-blue-500 text-sm py-1.5 rounded-full hover:bg-blue-50">
+                                <i class="fas fa-book-open mr-1"></i> ทดลองอ่าน
+                            </button>
+                           <button onclick="openOrderModal('The Famous Five', 161)" class="bg-blue-100 text-blue-600 px-3 py-1.5 rounded-full hover:bg-blue-200">
+                                <i class="fas fa-shopping-cart"></i>
+                            </button>
+                        </div>
+                        <div class="bg-gradient-to-r from-[#FDE68A] via-[#FCD34D] to-[#F8AF64] text-black text-sm py-1.5 px-2 rounded-md flex items-center justify-center">
+                            <i class="far fa-clock mr-1"></i> สิ้นสุดใน 4 วัน
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow-sm overflow-hidden flex flex-col border border-gray-200">
+                    <img src="https://m.media-amazon.com/images/I/71ZYg+ZY5mL._AC_UF1000,1000_QL80_.jpg" alt="Book Cover" class="w-full aspect-[2/3] object-cover">
+                    <div class="p-3 flex-grow flex flex-col">
+                        <h3 class="text-md font-bold text-gray-800 h-10 mb-4">Text Books of Art Education</h3>
+                        <div class="flex items-center gap-2 mb-4">
+                            <span class="text-gray-400 line-through text-md text-yellow-500">฿179.00</span>
+                            <span class="text-gray-800 text-md">฿161.00</span>
+                        </div>
+                        <div class="flex gap-1 mb-3">
+                            <button class="flex-1 border border-blue-400 text-blue-500 text-sm py-1.5 rounded-full hover:bg-blue-50">
+                                <i class="fas fa-book-open mr-1"></i> ทดลองอ่าน
+                            </button>
+                           <button onclick="openOrderModal('The Famous Five', 161)" class="bg-blue-100 text-blue-600 px-3 py-1.5 rounded-full hover:bg-blue-200">
+                                <i class="fas fa-shopping-cart"></i>
+                            </button>
+                        </div>
+                        <div class="bg-gradient-to-r from-[#FDE68A] via-[#FCD34D] to-[#F8AF64] text-black text-sm py-1.5 px-2 rounded-md flex items-center justify-center">
+                            <i class="far fa-clock mr-1"></i> สิ้นสุดใน 4 วัน
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow-sm overflow-hidden flex flex-col border border-gray-200">
+                    <img src="https://images.booksense.com/images/874/280/9781484280874.jpg" alt="Book Cover" class="w-full aspect-[2/3] object-cover">
+                    <div class="p-3 flex-grow flex flex-col">
+                        <h3 class="text-md font-bold text-gray-800 h-10 mb-4">Designing Human-Centric AI Experiences</h3>
+                        <div class="flex items-center gap-2 mb-4">
+                            <span class="text-gray-400 line-through text-md text-yellow-500">฿179.00</span>
+                            <span class="text-gray-800 text-md">฿161.00</span>
+                        </div>
+                        <div class="flex gap-1 mb-3">
+                            <button class="flex-1 border border-blue-400 text-blue-500 text-sm py-1.5 rounded-full hover:bg-blue-50">
+                                <i class="fas fa-book-open mr-1"></i> ทดลองอ่าน
+                            </button>
+                            <button onclick="openOrderModal('The Famous Five', 161)" class="bg-blue-100 text-blue-600 px-3 py-1.5 rounded-full hover:bg-blue-200">
+                                <i class="fas fa-shopping-cart"></i>
+                            </button>
+                        </div>
+                        <div class="bg-gradient-to-r from-[#FDE68A] via-[#FCD34D] to-[#F8AF64] text-black text-sm py-1.5 px-2 rounded-md flex items-center justify-center">
+                            <i class="far fa-clock mr-1"></i> สิ้นสุดใน 4 วัน
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow-sm overflow-hidden flex flex-col border border-gray-200">
+                    <img src="https://m.media-amazon.com/images/I/71xMkjEXxLL._AC_UF1000,1000_QL80_.jpg" alt="Book Cover" class="w-full aspect-[2/3] object-cover">
+                    <div class="p-3 flex-grow flex flex-col">
+                        <h3 class="text-md font-bold text-gray-800 h-10 mb-4">The Essential Guide to Business</h3>
+                        <div class="flex items-center gap-2 mb-4">
+                            <span class="text-gray-400 line-through text-md text-yellow-500">฿179.00</span>
+                            <span class="text-gray-800 text-md">฿161.00</span>
+                        </div>
+                        <div class="flex gap-1 mb-3">
+                            <button class="flex-1 border border-blue-400 text-blue-500 text-sm py-1.5 rounded-full hover:bg-blue-50">
+                                <i class="fas fa-book-open mr-1"></i> ทดลองอ่าน
+                            </button>
+                             <button onclick="openOrderModal('The Famous Five', 161)" class="bg-blue-100 text-blue-600 px-3 py-1.5 rounded-full hover:bg-blue-200">
+                                <i class="fas fa-shopping-cart"></i>
+                            </button>
+                        </div>
+                        <div class="bg-gradient-to-r from-[#FDE68A] via-[#FCD34D] to-[#F8AF64] text-black text-sm py-1.5 px-2 rounded-md flex items-center justify-center">
+                            <i class="far fa-clock mr-1"></i> สิ้นสุดใน 4 วัน
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow-sm overflow-hidden flex flex-col border border-gray-200">
+                    <img src="https://jace.online/public1/journals/2/cover_issue_15_en_US.jpg" alt="Book Cover" class="w-full aspect-[2/3] object-cover">
+                    <div class="p-3 flex-grow flex flex-col">
+                        <h3 class="text-md font-bold text-gray-800 h-10 mb-4">Journal of Artistic and Creative Education</h3>
+                        <div class="flex items-center gap-2 mb-4">
+                            <span class="text-gray-400 line-through text-md text-yellow-500">฿179.00</span>
+                            <span class="text-gray-800 text-md">฿161.00</span>
+                        </div>
+                        <div class="flex gap-1 mb-3">
+                            <button class="flex-1 border border-blue-400 text-blue-500 text-sm py-1.5 rounded-full hover:bg-blue-50">
+                                <i class="fas fa-book-open mr-1"></i> ทดลองอ่าน
+                            </button>
+                            <button onclick="openOrderModal('The Famous Five', 161)" class="bg-blue-100 text-blue-600 px-3 py-1.5 rounded-full hover:bg-blue-200">
+                                <i class="fas fa-shopping-cart"></i>
+                            </button>
+                        </div>
+                        <div class="bg-gradient-to-r from-[#FDE68A] via-[#FCD34D] to-[#F8AF64] text-black text-sm py-1.5 px-2 rounded-md flex items-center justify-center">
+                            <i class="far fa-clock mr-1"></i> สิ้นสุดใน 4 วัน
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow-sm overflow-hidden flex flex-col border border-gray-200">
+                    <img src="https://m.media-amazon.com/images/I/51FXD0MXNUL._AC_UF1000,1000_QL80_.jpg" alt="Book Cover" class="w-full aspect-[2/3] object-cover">
+                    <div class="p-3 flex-grow flex flex-col">
+                        <h3 class="text-md font-bold text-gray-800 h-10 mb-4">The Simple Art of SoC Design</h3>
+                        <div class="flex items-center gap-2 mb-4">
+                            <span class="text-gray-400 line-through text-md text-yellow-500">฿179.00</span>
+                            <span class="text-gray-800 text-md">฿161.00</span>
+                        </div>
+                        <div class="flex gap-1 mb-3">
+                            <button class="flex-1 border border-blue-400 text-blue-500 text-sm py-1.5 rounded-full hover:bg-blue-50">
+                                <i class="fas fa-book-open mr-1"></i> ทดลองอ่าน
+                            </button>
+                            <button onclick="openOrderModal('The Famous Five', 161)" class="bg-blue-100 text-blue-600 px-3 py-1.5 rounded-full hover:bg-blue-200">
+                                <i class="fas fa-shopping-cart"></i>
+                            </button>
+                        </div>
+                        <div class="bg-gradient-to-r from-[#FDE68A] via-[#FCD34D] to-[#F8AF64] text-black text-sm py-1.5 px-2 rounded-md flex items-center justify-center">
+                            <i class="far fa-clock mr-1"></i> สิ้นสุดใน 4 วัน
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow-sm overflow-hidden flex flex-col border border-gray-200">
+                    <img src="https://m.media-amazon.com/images/I/71rBkz1LSwL._AC_UF1000,1000_QL80_.jpg" alt="Book Cover" class="w-full aspect-[2/3] object-cover">
+                    <div class="p-3 flex-grow flex flex-col">
+                        <h3 class="text-md font-bold text-gray-800 h-10 mb-4">Art & Design Education in Times</h3>
+                        <div class="flex items-center gap-2 mb-4">
+                            <span class="text-gray-400 line-through text-md text-yellow-500">฿179.00</span>
+                            <span class="text-gray-800 text-md">฿161.00</span>
+                        </div>
+                        <div class="flex gap-1 mb-3">
+                            <button class="flex-1 border border-blue-400 text-blue-500 text-sm py-1.5 rounded-full hover:bg-blue-50">
+                                <i class="fas fa-book-open mr-1"></i> ทดลองอ่าน
+                            </button>
+                            <button onclick="openOrderModal('The Famous Five', 161)" class="bg-blue-100 text-blue-600 px-3 py-1.5 rounded-full hover:bg-blue-200">
+                                <i class="fas fa-shopping-cart"></i>
+                            </button>
+                        </div>
+                        <div class="bg-gradient-to-r from-[#FDE68A] via-[#FCD34D] to-[#F8AF64] text-black text-sm py-1.5 px-2 rounded-md flex items-center justify-center">
+                            <i class="far fa-clock mr-1"></i> สิ้นสุดใน 4 วัน
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+
+    <footer class="bg-[#0D172B] text-white pt-12 pb-8 mt-20 w-full">
+        
+        <div class="max-w-7xl mx-auto px-6">
+            
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-10 mb-16">
+                
+                <div class="space-y-4">
+                    <div class="flex items-center gap-2">
+                        <div class="flex gap-1">
+                            <div class="w-1 h-6 bg-red-500"></div>
+                            <div class="w-1 h-6 bg-green-500"></div>
+                            <div class="w-1 h-6 bg-blue-500"></div>
+                        </div>
+                        <span class="text-xl font-bold tracking-tighter italic">MASTER BOOK</span>
+                    </div>
+                    <p class="text-xs text-gray-400 leading-relaxed">
+                        Official eBook store and application for Manga and Light Novel enthusiasts.
+                    </p>
+                </div>
+
+                <div>
+                    <h3 class="font-bold mb-5 text-sm">Follow Us</h3>
+                    <ul class="space-y-3 text-sm text-gray-300">
+                        <li><a href="#" class="hover:text-white flex items-center gap-3"><i class="fab fa-facebook text-lg"></i> Facebook</a></li>
+                        <li><a href="#" class="hover:text-white flex items-center gap-3"><i class="fab fa-instagram text-xl w-6"></i> Instagram</a></li>
+                        <li><a href="#" class="hover:text-white flex items-center gap-3"><i class="fab fa-tiktok text-xl w-6"></i> TikTok</a></li>
+                        <li><a href="#" class="hover:text-white flex items-center gap-3"><i class="fab fa-x-twitter text-lg"></i> X (Twitter)</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3 class="font-bold mb-5 text-sm">Getting Started</h3>
+                    <ul class="space-y-2 text-sm text-gray-400">
+                        <li><a href="#" class="hover:text-white">Master Book Point</a></li>
+                        <li><a href="#" class="hover:text-white">Coupon Guide</a></li>
+                        <li><a href="#" class="hover:text-white">Android System</a></li>
+                        <li><a href="#" class="hover:text-white">iOS System</a></li>
+                        <li><a href="#" class="hover:text-white">FAQ</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3 class="font-bold mb-5 text-sm uppercase">Download Master Book App</h3>
+                    <div class="flex flex-col gap-3">
+                        <a href="#"><img src="https://upload.wikimedia.org/wikipedia/commons/3/3c/Download_on_the_App_Store_Badge.svg" alt="App Store" class="w-32"></a>
+                        <a href="#"><img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" alt="Google Play" class="w-32"></a>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="pt-8">
+                <p class="text-[10px] text-gray-500 tracking-widest uppercase">
+                    © MASTER BOOK CORPORATION
+                </p>
+            </div>
+        </div>
+    </footer>
+
+     <div id="orderModal" class="hidden fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center p-4">
+        <div class="bg-white rounded-2xl max-w-md w-full p-6 shadow-2xl">
+            <div class="flex justify-between items-center mb-6">
+                <h2 class="text-xl font-bold text-gray-800">ສັ່ງຊື້ສິນຄ້າ</h2>
+                <button onclick="closeModal()" class="text-gray-400 hover:text-gray-600 text-2xl">&times;</button>
+            </div>
+            
+            <div class="mb-6">
+                <p class="text-gray-500 text-sm">ຊື່ປື້ມ:</p>
+                <p id="modalBookTitle" class="text-lg font-semibold text-blue-600"></p>
+            </div>
+
+            <div class="flex items-center justify-between mb-8 bg-gray-50 p-4 rounded-xl">
+                <div>
+                    <p class="text-sm text-gray-500">ເລືອກຈຳນວນ</p>
+                    <div class="flex items-center gap-4 mt-2">
+                        <button onclick="updateQty(-1)" class="w-8 h-8 rounded-full border border-gray-300 flex items-center justify-center hover:bg-white">-</button>
+                        <span id="quantity" class="text-lg font-bold w-6 text-center">1</span>
+                        <button onclick="updateQty(1)" class="w-8 h-8 rounded-full border border-gray-300 flex items-center justify-center hover:bg-white">+</button>
+                    </div>
+                </div>
+                <div class="text-right">
+                    <p class="text-sm text-gray-500">ລາຄາລວມທັງໝົດ</p>
+                    <p class="text-2xl font-bold text-orange-500">฿<span id="totalPrice">0</span></p>
+                </div>
+            </div>
+
+            <button onclick="confirmOrder()" class="w-full bg-blue-600 text-white py-3 rounded-xl font-bold hover:bg-blue-700 transition shadow-lg shadow-blue-200">
+                ຢືນຢັນການສັ່ງຊື້
+            </button>
+        </div>
+</div>
+
+<script src="buy.js"></script>
+
+</body>
+</html>
